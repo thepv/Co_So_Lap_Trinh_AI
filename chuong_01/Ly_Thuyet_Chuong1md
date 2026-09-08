@@ -35,7 +35,6 @@ Hai môi trường phù hợp cho học phần là:
 - **Jupyter Notebook/Google Colab:** Tổ chức mã thành cell và hiển thị kết quả ngay bên dưới, phù hợp cho khám phá dữ liệu.
 
 **📝 Mã nguồn 1: Chương trình Python đầu tiên**
-```python
 course = "Cơ sở lập trình cho Trí tuệ nhân tạo"
 print("Hello, AI World!")
 print(f"Học phần: {course}")
@@ -48,7 +47,6 @@ print(f"Học phần: {course}")
 > ⚠️ **Đọc thông báo lỗi:** Traceback nên được đọc từ dòng cuối để xác định loại lỗi, sau đó đi ngược lên để tìm file và dòng mã. Các lỗi phổ biến: `SyntaxError`, `NameError`, `TypeError`, `ValueError` và lỗi logic.
 
 **📝 Mã nguồn 2: Mã chứa lỗi dùng cho hoạt động gỡ lỗi**
-```python
 # Mã này cố ý không chạy. Hãy tìm và sửa ba lỗi.
 Print("Chào mừng đến với môn Cơ sở lập trình cho AI")
 
@@ -78,7 +76,7 @@ Biến là tên tham chiếu đến một đối tượng trong bộ nhớ. Dấ
 | `NoneType`| `None` | Chưa có giá trị, dữ liệu thiếu, kết quả không xác định. |
 
 **📝 Mã nguồn 3: Biến, kiểu dữ liệu và toán tử**
-```python
+
 sample_count = 50
 accuracy = 0.85
 model_name = "Linear Regression"
@@ -101,7 +99,7 @@ print(f"Đạt yêu cầu: {is_acceptable}")
 | Gán | `=` | Gán giá trị; không dùng để so sánh (dùng `==`). |
 
 **📝 Mã nguồn 4: Chuyển kiểu và kiểm tra điều kiện**
-```python
+
 raw_score = "8.5"
 score = float(raw_score)
 is_valid_score = 0 <= score <= 10
@@ -114,7 +112,7 @@ print(f"Điểm nhân hệ số 2: {score * 2}")
 ```
 
 **📝 Mã nguồn 5: Nhập liệu an toàn bằng try-except**
-```python
+
 raw_score = input("Nhập điểm số (0-10): ")
 try:
     score = float(raw_score)
@@ -133,7 +131,6 @@ if score is not None:
 Rẽ nhánh chọn khối lệnh dựa trên điều kiện: `if`, `elif`, `else`. Python dùng thụt lề (indentation) để xác định khối lệnh (quy ước 4 dấu cách).
 
 **📝 Mã nguồn 6 & 7: Khuôn mẫu if-elif-else & Phân loại điểm**
-```python
 temperature = 31
 if temperature >= 35:
     action = "Bật cảnh báo nhiệt độ cao"
@@ -157,7 +154,6 @@ print(f"Kết quả đánh giá: {category}")
 ```
 
 **📝 Mã nguồn 8: Hai dạng vòng lặp (for & while)**
-```python
 # Vòng lặp for với range
 for index in range(1, 4):
     print(f"Lần lặp: {index}")
@@ -174,7 +170,6 @@ while countdown > 0:
 - `break`: Kết thúc ngay vòng lặp gần nhất.
 
 **📝 Mã nguồn 9: Bỏ dữ liệu không hợp lệ và dừng tại tín hiệu kết thúc**
-```python
 values = [1, 2, 5, -4, 0, 6]
 valid_values = []
 for value in values:
@@ -195,7 +190,7 @@ print(valid_values)  # [1, 2, 5]
 Hàm gom một tác vụ có tên để tái sử dụng và kiểm thử. Từ khóa `return` trả kết quả về nơi gọi.
 
 **📝 Mã nguồn 10: Hàm tính độ chính xác có kiểm tra đầu vào**
-```python
+
 def calculate_accuracy(correct_count, total_count=100):
     """Return accuracy in [0, 1] for valid counts."""
     if total_count <= 0:
@@ -214,7 +209,6 @@ print(f"{accuracy_1:.1%}; {accuracy_2:.1%}")
 Tên tạo trong hàm là `local` (cục bộ). Tên ở cấp module là `global` (toàn cục). 
 
 **📝 Mã nguồn 11: Local và global**
-```python
 language_name = "Python"  # global
 
 def format_language(version):
@@ -229,7 +223,7 @@ print(format_language("3.12"))
 Phân rã một pipeline nhỏ thành các bước đơn nhiệm: kiểm tra, biến đổi, tổng hợp, trình bày.
 
 **📝 Mã nguồn 12: Chương trình xử lý điểm theo cấu trúc hàm**
-```python
+
 def clean_scores(raw_scores):
     """Keep numeric scores in the closed interval [0, 10]."""
     clean = []
@@ -265,7 +259,7 @@ if __name__ == "__main__":
 - **Tuple:** Có cấu trúc ngoài immutable (không thay đổi được), phù hợp nhóm giá trị vị trí ổn định.
 
 **📝 Mã nguồn 13: List, tuple, slicing và comprehension**
-```python
+
 scores = [7.5, 8.0, 6.5, 9.0]
 scores.append(9.5)
 first_three = scores[:3]
@@ -284,7 +278,7 @@ print(scores_on_100)
 - **Set:** Lưu phần tử duy nhất, hỗ trợ hợp, giao, hiệu. 
 
 **📝 Mã nguồn 14 & 15: Dictionary & Set**
-```python
+
 # Dictionary
 model_info = {
     "name": "Decision Tree",
@@ -313,7 +307,6 @@ Các thao tác: `strip()`, `lower()`, `upper()`, `split()`, `join()`, F-string.
 Nên chuẩn hóa Unicode (NFC) cho tiếng Việt.
 
 **📝 Mã nguồn 16: Chuẩn hóa Unicode**
-```python
 import unicodedata
 
 raw_text = "Ngôn ngữ Python cho AI"
@@ -329,7 +322,7 @@ print(tokens)
 Dùng Context manager `with open(...)` đóng file tự động. Luôn chỉ rõ `encoding="utf-8"`.
 
 **📝 Mã nguồn 17: Ghi và đọc lại TXT, CSV, JSON**
-```python
+
 import csv
 import json
 from pathlib import Path

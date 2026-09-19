@@ -11,7 +11,7 @@ Chào mừng bạn đến với tài liệu hướng dẫn. Tài liệu này đ�
 
 ### Chương 2: Cấu trúc dữ liệu
 - [📖 Lý thuyết Chương 2](./chuong_02/Ly_Thuyet_Chuong2.md)
-- [💻 Bài tập Chương 2](./chuong_02/Bai_Tap_Chuong12.md)
+- [💻 Bài tập Chương 2](./chuong_02/Bai_tap_chuong2.md)
 
 ---
 *Lưu ý: Nhấp vào các liên kết trên để đi đến nội dung tương ứng.*

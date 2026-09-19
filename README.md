@@ -6,7 +6,7 @@ Chào mừng bạn đến với tài liệu hướng dẫn. Tài liệu này đ�
 ## Mục lục
 
 ### Chương 1: Nền tảng cơ bản
-- [📖 Lý thuyết Chương 1](./chuong_01/ly_thuyet.md)
+- [📖 Lý thuyết Chương 1](./chuong_01/Ly_Thuyet_Chuong1.md)
 - [💻 Bài tập Chương 1](./chuong_01/bai_tap.md)
 
 ### Chương 2: Cấu trúc dữ liệu

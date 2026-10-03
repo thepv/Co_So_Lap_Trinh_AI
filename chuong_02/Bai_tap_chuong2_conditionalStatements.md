@@ -11,3 +11,16 @@
 **Yêu cầu:** Khai báo biến `gpu_temp = 83.5` và viết cấu trúc rẽ nhánh phù hợp để xuất thông điệp tương ứng.
 
 ---
+### Bài tập 2: Xác thực và xử lý nhãn phân loại giao dịch (Transaction Verification)
+
+**Mục tiêu:** Kết hợp rẽ nhánh với toán tử kiểm tra tập hợp (`in`) và xử lý dữ liệu khuyết thiếu (`None`).
+
+**Mô tả:** Bảng dữ liệu giao dịch có trường phân loại hình thức thanh toán `payment_method`. Hệ thống chỉ chấp nhận 3 hình thức hợp lệ: `"MOMO"`, `"VNPAY"`, `"BANK_TRANSFER"`. Dữ liệu có thể bị khuyết (`None`), chứa chuỗi rỗng `""`, hoặc chứa hình thức lạ chưa hỗ trợ (ví dụ `"CASH"`).
+
+**Yêu cầu:** Viết đoạn mã kiểm tra biến `payment_method`:
+* Nếu là `None` hoặc chuỗi rỗng: Phân loại là `"Thiếu thông tin"`.
+* Nếu nằm trong 3 hình thức được hỗ trợ: Chuẩn hóa và thông báo `"Hợp lệ: <TÊN_PHƯƠNG_THỨC>"`.
+* Mọi trường hợp còn lại: Thông báo `"Phương thức không được hỗ trợ: <GIÁ_TRỊ>"`.
+
+---
+

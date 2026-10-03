@@ -23,4 +23,43 @@
 * Mọi trường hợp còn lại: Thông báo `"Phương thức không được hỗ trợ: <GIÁ_TRỊ>"`.
 
 ---
+### Bài tập 3: Cổng kiểm soát chất lượng dữ liệu trước huấn luyện (Quality Gate)
+
+**Mục tiêu:** Áp dụng rẽ nhánh lồng nhau hoặc kết hợp điều kiện phức hợp để đưa ra quyết định chấp thuận hay từ chối một tập dữ liệu đầu vào.
+
+**Mô tả:** Một tập dữ liệu khách hàng được đánh giá bởi 3 chỉ số:
+* `missing_rate`: Tỷ lệ khuyết thiếu của toàn bảng (giá trị thực từ 0.0 đến 1.0).
+* `duplicate_id_count`: Số lượng mã định danh khách hàng bị trùng lặp (số nguyên).
+* `row_count`: Số dòng dữ liệu thực tế thu thập được.
+
+**Quy tắc quyết định:**
+* Nếu `row_count < 100`: Từ chối ngay lập tức với lý do `"Dữ liệu quá ít để huấn luyện"`.
+* Nếu `duplicate_id_count > 0`: Từ chối với lý do `"Vi phạm tính duy nhất của ID: cần lọc trùng trước"`.
+* Nếu `missing_rate > 0.2` (>20%): Từ chối với lý do `"Tỷ lệ khuyết thiếu quá cao"`.
+* Nếu `missing_rate > 0.05` (từ 5% đến 20%): Cảnh báo `"Chấp thuận có điều kiện: Cần kích hoạt bộ điền khuyết (Imputer)"`.
+* Ngược lại: Thông báo `"Chấp thuận: Dữ liệu sạch, sẵn sàng bàn giao cho mô hình"`.
+
+**Yêu cầu:** Viết chương trình kiểm tra cho bộ chỉ số: `row_count = 250`, `duplicate_id_count = 0`, `missing_rate = 0.08`.
+
+---
+### Bài tập 4: Tối ưu hóa phân phối tác vụ xử lý bất đồng bộ (Task Worker Dispatcher)
+
+**Mục tiêu:** Áp dụng cấu trúc `match-case` (Python 3.10+) để định tuyến tác vụ và sử dụng toán tử ternary (`if-else` một dòng) để gán trạng thái ưu tiên tốc độ xử lý.
+
+**Mô tả:** Hệ thống xử lý dữ liệu nhận vào các gói tác vụ dưới dạng một từ điển (dictionary). Mỗi tác vụ gồm hai thông tin: `type` (loại tác vụ: `"ETL"`, `"TRAIN"`, `"INFERENCE"`) và `size` (dung lượng dữ liệu tính bằng MB).
+
+**Quy tắc xử lý:**
+1. Định tuyến worker dựa trên `type` bằng `match-case`:
+   * `"ETL"`: Định tuyến đến `"Spark-Worker"`.
+   * `"TRAIN"`: Định tuyến đến `"GPU-Worker"`.
+   * `"INFERENCE"`: Định tuyến đến `"CPU-Worker"`.
+   * Các giá trị khác: Định tuyến đến `"Unknown-Worker"`.
+2. Xác định chế độ hàng đợi bằng toán tử ternary (một dòng): Nếu `size > 500` thì chế độ là `"High-Priority"`, ngược lại là `"Standard"`.
+
+**Yêu cầu:** Khai báo tác vụ `task = {"type": "TRAIN", "size": 650}`. Viết chương trình xuất ra thông tin định tuyến theo cấu trúc: `"[<CHẾ_ĐỘ_HÀNG_ĐỢI>] Gửi tác vụ đến <TÊN_WORKER>"`
+
+---
+
+
+
 

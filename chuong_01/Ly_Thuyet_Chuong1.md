@@ -190,7 +190,7 @@ print(valid_values)  # [1, 2, 5]
 
 ---
 ▶️ [Xem video Chương 1 Nền tảng Python cho lập trình và trí
-tuệ nhân tạo (Function)](https://www.youtube.com/watch?S2uLV1kIb3g)
+tuệ nhân tạo (Function)](https://www.youtube.com/watch?v=S2uLV1kIb3g)
 ## 🛠️ 1.3. Hàm và thiết kế chương trình
 
 ### 📦 1.3.1. Định nghĩa hàm, tham số, giá trị trả về

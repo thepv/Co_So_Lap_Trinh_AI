@@ -260,7 +260,9 @@ if __name__ == "__main__":
 
 ---
 
-## 🗂️ 1.4. Cấu trúc dữ liệu cơ bản
+## 🗂️ 1.4. Cấu trúc dữ liệu cơ bản  
+▶️ [Xem video Chương 1 Nền tảng Python cho lập trình và trí
+tuệ nhân tạo ( Cấu trúc dữ liệu )](https://www.youtube.com/watch?v=LYOoq4inCTA)  
 
 ### 📋 1.4.1. List, tuple và kỹ thuật xử lý
 - **List:** Sequence có thứ tự, mutable (thay đổi được).

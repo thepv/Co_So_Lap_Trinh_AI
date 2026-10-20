@@ -129,4 +129,25 @@ Giả sử mảng gốc `weather_data` có `shape = (3, 7)`. Dưới đây là b
 | **Broadcasting** | `weather_data + vector_1D` | `(3, 7)` | `(3, 7)` | Cộng mảng `(3, 7)` với một mảng 1D `(7,)`. NumPy tự động nhân bản (stretch) dòng dữ liệu dọc theo trục đứng (trục trạm) để khớp kích thước thực hiện phép toán song song. |
 
 ---
+# 🐼 Bài 5: Phân Tích Dữ Liệu Khí Tượng Với Pandas & Kỹ Thuật Xử Lý Dữ Liệu Khuyết Thiếu
+
+## 🎯 Nhiệm Vụ
+Sử dụng thư viện Pandas để thực hiện quy trình chuẩn hóa, phân tích cấu trúc và làm sạch một tập dữ liệu khí tượng thực tế được đọc từ tệp tin CSV:
+1. **Khảo sát lược đồ (Schema Inspection)**: Đọc dữ liệu, kiểm tra các kiểu dữ liệu (`dtypes`), số lượng bản ghi và phát hiện các cột chứa giá trị rỗng (`Null/NaN`).
+2. **Thiết lập Chỉ mục đa cấp (MultiIndex)**: Định hình lại cấu trúc bảng bằng cách đặt cấu trúc phân cấp chỉ mục dựa trên hai trường định danh: Trạm khí tượng (`Station_ID`) và Thời gian (`Year`, `Month`).
+3. **Truy vấn nâng cao (Lọc & Sắp xếp)**: Sử dụng phương thức `.loc` để trích xuất dữ liệu theo MultiIndex và sắp xếp lại chỉ mục theo thứ tự logic nhằm tối ưu hóa hiệu năng truy vấn.
+4. **Thống kê tỷ lệ khuyết thiếu (Missing Data Analysis)**: Tính toán chính xác tỷ lệ phần trăm dữ liệu bị trống trên từng thuộc tính đo lường.
+5. **Xử lý dữ liệu thiếu có lập luận**: Đề xuất giải pháp loại bỏ hoặc nội suy dữ liệu dựa trên bản chất khoa học của từng chỉ số khí tượng.
+
+---
+
+## 📥 Đầu Vào (Input)
+* Tệp dữ liệu cấu trúc mẫu mang tên `weather_stations_data.csv` (Sinh viên tải về theo liên kết được cung cấp cuối bài).
+* Tập dữ liệu bao gồm các trường thông tin: `Station_ID` (Mã trạm), `Year` (Năm), `Month` (Tháng), `Temperature` (Nhiệt độ), `Humidity` (Độ ẩm), và `Precipitation` (Lượng mưa). Trong đó một số ô dữ liệu bị trống do lỗi thiết bị cảm biến.
+
+## 📤 Đầu Ra (Output)
+* Mã nguồn Python triển khai đầy đủ các bước khảo sát, đặt MultiIndex, lọc và xử lý khuyết thiếu.
+* Bảng thống kê chi tiết tỷ lệ khuyết thiếu của từng thuộc tính kèm theo lập luận khoa học cho phương án xử lý được lựa chọn.
+
+---
 

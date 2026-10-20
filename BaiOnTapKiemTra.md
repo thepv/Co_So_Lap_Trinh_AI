@@ -93,6 +93,40 @@ Hoàn thành khi. Cấu trúc được chọn phù hợp với thứ tự, tính
 chương trình phát hiện đúng bản ghi trùng.  
 Tham khảo:  
 <img width="1052" height="412" alt="image" src="https://github.com/user-attachments/assets/a55d1eea-a6e9-476e-b131-164c8e2c203b" />
+---  
+# 🌡️ Bài 4: Xử Lý Mảng Nâng Cao Với NumPy & Tối Ưu Hóa Hiệu Năng Vector Hóa
+
+## 🎯 Nhiệm Vụ
+Ứng dụng thư viện NumPy để quản lý, thao tác dữ liệu nhiệt độ đa chiều và đánh giá hiệu năng giữa tư duy lập trình tối ưu (Vectorization) với vòng lặp truyền thống:
+1. **Khởi tạo mảng dữ liệu**: Tạo mảng NumPy 2D mô phỏng nhiệt độ của **3 trạm khí tượng** trong vòng **7 ngày**.
+2. **Khảo sát thuộc tính mảng (Shape Inspection)**: Dự đoán và kiểm tra hình dạng (`shape`) của mảng sau các thao tác truy xuất dữ liệu nâng cao gồm: Indexing (Chỉ mục), Slicing (Cắt mảng), và Broadcasting (Lan truyền).
+3. **Tính toán thống kê tốc độ cao**: Sử dụng các hàm toán học tích hợp sẵn của NumPy (Vectorization) để tính nhiệt độ trung bình theo từng trạm và theo từng ngày.
+4. **Đánh giá hiệu năng (Benchmarking)**: Mở rộng quy mô dữ liệu đủ lớn, viết phiên bản dùng vòng lặp lồng nhau (`for`), đo lường và so sánh thời gian thực thi với phiên bản vector hóa của NumPy để thấy rõ sự khác biệt.
+
+---
+
+## 📥 Đầu Vào (Input)
+* Mảng NumPy (`np.ndarray`) kiểu số thực (`float`) có cấu trúc `shape = (n_stations, n_days)`.
+* Trong đó: Mỗi **hàng** đại diện cho một trạm khí tượng, mỗi **cột** đại diện cho một ngày trong tuần.
+
+## 📤 Đầu Ra (Output)
+* Hai vector kết quả:
+  * Vector trung bình theo **trạm** (Chiều dài bằng số trạm).
+  * Vector trung bình theo **ngày** (Chiều dài bằng số ngày).
+* Kết quả đo lường thời gian chạy (Báo cáo Benchmark tốc độ giữa Vòng lặp vs Vectorization).
+
+---
+
+## 🔬 1. Ma Trận Dự Đoán Hình Dạng (Shape) Khi Thao Tác Mảng
+
+Giả sử mảng gốc `weather_data` có `shape = (3, 7)`. Dưới đây là bảng phân tích, giải thích bản chất kích thước trước khi thực thi mã nguồn:
+
+| Thao Tác Thí Nghiệm | Cú Pháp Minh Họa | Shape Dự Đoán | Shape Thực Tế | Giải Thích Bản Chất Kích Thước 💡 |
+| :--- | :--- | :--- | :--- | :--- |
+| **Scalar Indexing** | `weather_data` | `()` | `()` | Lấy ra 1 phần tử đơn lẻ (hàng 2, cột 3) nên giảm toàn bộ số chiều về một giá trị vô hướng (0D Scalar). |
+| **Slicing (Cắt mảng)** | `weather_data[0:2, 1:4]` | `(2, 3)` | `(2, 3)` | Giữ nguyên số chiều (2D). Trích xuất vùng giao giữa hàng 0,1 và cột 1,2,3. |
+| **Mixed (Index + Slice)**| `weather_data[1, :]` | `(7,)` | `(7,)` | Trích xuất toàn bộ cột thuộc hàng số 2. Chiều nào nhận chỉ mục đơn lẻ cố định sẽ bị triệt tiêu, mảng hạ xuống thành 1D. |
+| **Broadcasting** | `weather_data + vector_1D` | `(3, 7)` | `(3, 7)` | Cộng mảng `(3, 7)` với một mảng 1D `(7,)`. NumPy tự động nhân bản (stretch) dòng dữ liệu dọc theo trục đứng (trục trạm) để khớp kích thước thực hiện phép toán song song. |
 
 ---
 

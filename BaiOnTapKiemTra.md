@@ -35,10 +35,34 @@ Dưới đây là bảng phân loại khoảng điểm tham khảo:
 | `[0.0 - 5.0)` | Yếu 🟤 |  
 
 Sản phẩm. File mã nguồn, bảng ít nhất 12 ca kiểm thử và bản giải thích ngắn cho ba quyết định
-điều khiển dòng thực thi.
+điều khiển dòng thực thi.  
 Hoàn thành khi. Chương trình xử lý được biên, dữ liệu rỗng và dữ liệu sai; kết quả của các ca
 kiểm thử khớp với dự đoán  
 
 Tham khảo:  
 <img width="650" height="210" alt="image" src="https://github.com/user-attachments/assets/2f856ab2-76aa-473f-8352-b4dee228327e" />
+---  
+# 🛠️ Bài 2: Tái Cấu Trúc Chương Trình (Refactoring) & Xử Lý Lỗi
+
+## 🎯 Nhiệm Vụ
+Tái cấu trúc lại toàn bộ chương trình xử lý điểm số của bài trước để nâng cao tính mô-đun, khả năng bảo trì và kiểm thử:
+1. **Chia nhỏ chương trình** thành các hàm đơn nhiệm (Single Responsibility): Nhập dữ liệu, kiểm tra hợp lệ, phân loại, tóm tắt thống kê và hiển thị.
+2. **Loại bỏ hoàn toàn trạng thái toàn cục** (Global State), truyền và nhận dữ liệu nghiêm ngặt qua tham số (`arguments`) và giá trị trả về (`return`).
+3. **Bổ sung Docstring** chuẩn hóa cho từng hàm để giải thích rõ ràng chức năng, đầu vào và đầu ra.
+4. **Chủ động tạo một lỗi hệ thống** để quan sát, phân tích lỗi thông qua `Traceback` trước khi tiến hành sửa lỗi.
+
+---
+
+## 📥 Đầu Vào (Input)
+* Danh sách các chuỗi ký tự biểu diễn điểm số tương tự như bài trước.
+
+## 📤 Đầu Đầu Ra (Output)
+Một **Báo cáo tổng hợp** (Summary Report) hiển thị trực quan các thông tin:
+* Tổng số lượng điểm hợp lệ và không hợp lệ.
+* Điểm trung bình của các sinh viên có điểm hợp lệ.
+* Số lượng chi tiết sinh viên đạt được theo từng mức phân loại (Xuất sắc, Giỏi, Khá...).
+Tham khảo:  
+<img width="1047" height="372" alt="image" src="https://github.com/user-attachments/assets/e997b66e-3261-4ddb-a201-3dfb8a45ee32" />
+
+
 ---

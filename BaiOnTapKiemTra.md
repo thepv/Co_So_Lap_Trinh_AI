@@ -87,17 +87,7 @@ Bảng đặc tả cấu trúc của một bản ghi học viên trong hệ th�
 | `name` | `str` | Không chứa ký tự số | Họ và tên đầy đủ của sinh viên |
 | `score` | `float` | Thuộc đoạn `[0.0; 10.0]` | Điểm số tổng kết của sinh viên |
 
----
-
-## 📊 2. Bảng So Sánh Các Cách Biểu Diễn Hồ Sơ
-
-| Tiêu Chí | Cách 1: List of Dictionaries (`List[dict]`) | Cách 2: List of Tuples (`List[tuple]`) |
-| :--- | :--- | :--- |
-| **Độ tường minh** | 🟢 **Rất cao**: Truy cập dữ liệu qua từ khóa rõ ràng như `sv["name"]`. | 🔴 **Thấp**: Truy cập qua chỉ số index cố định như `sv[1]`, dễ nhầm lẫn. |
-| **Tính linh hoạt** | 🟢 **Cao**: Dễ dàng thêm, sửa hoặc xóa bớt các trường thông tin của sinh viên. | 🔴 **Thấp**: Tuple là immutable (bất biến), muốn sửa phải tạo mới hoàn toàn. |
-| **Hiệu năng bộ nhớ**| 🟡 **Tốn nhiều bộ nhớ hơn** do phải lưu trữ các cặp key-value cho từng bản ghi. | 🟢 **Tối ưu hơn**, chiếm ít tài nguyên bộ nhớ hơn trong các mảng dữ liệu lớn. |
-
-📌 **Lý do lựa chọn cấu trúc cuối (`List[dict]`):** Mặc dù tốn bộ nhớ hơn một chút so với Tuple, nhưng `List[dict]` mang lại sự cân bằng hoàn hảo cho các ứng dụng thực tế. Nó giúp mã nguồn cực kỳ dễ đọc, dễ bảo trì, và tích hợp tự nhiên với các định dạng dữ liệu phổ biến hiện nay như JSON hoặc bản ghi từ Cơ sở dữ liệu (Database rows).  
+--- 
 Sản phẩm. File mã nguồn, từ điển dữ liệu và bảng so sánh cấu trúc dữ liệu.  
 Hoàn thành khi. Cấu trúc được chọn phù hợp với thứ tự, tính duy nhất và khả năng thay đổi;
 chương trình phát hiện đúng bản ghi trùng.  

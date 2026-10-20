@@ -1,5 +1,5 @@
-# 🏆 CHƯƠNG 2: Tổ chức và thao tác dữ liệu với NumPy và Pandas
-
+# 🏆 CHƯƠNG 2: Tổ chức và thao tác dữ liệu với NumPy và Pandas  
+▶️ [Xem video Chương 2 Tổ chức và thao tác dữ liệu với NumPy và Pandas](https://www.youtube.com/watch?v=noI1hc3aMxY)
 **🎯 Chuẩn đầu ra:** CLO1, CLO2, CLO3 | ⏱️ **Thời lượng:** 6 tiết - 12 giờ tự học
 **📘 Khung bài giảng:** Từ cấu trúc dữ liệu Python đến dữ liệu dạng mảng và bảng
 

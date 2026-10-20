@@ -34,6 +34,11 @@ Dưới đây là bảng phân loại khoảng điểm tham khảo:
 | `[5.0 - 6.5)` | Trung Bình 🔵 |
 | `[0.0 - 5.0)` | Yếu 🟤 |  
 
+Sản phẩm. File mã nguồn, bảng ít nhất 12 ca kiểm thử và bản giải thích ngắn cho ba quyết định
+điều khiển dòng thực thi.
+Hoàn thành khi. Chương trình xử lý được biên, dữ liệu rỗng và dữ liệu sai; kết quả của các ca
+kiểm thử khớp với dự đoán  
+
 Tham khảo:  
 <img width="650" height="210" alt="image" src="https://github.com/user-attachments/assets/2f856ab2-76aa-473f-8352-b4dee228327e" />
 ---

@@ -33,7 +33,7 @@ Dưới đây là bảng phân loại khoảng điểm tham khảo:
 | `[6.5 - 8.0)` | Khá 🟡 |
 | `[5.0 - 6.5)` | Trung Bình 🔵 |
 | `[0.0 - 5.0)` | Yếu 🟤 |  
+
 Tham khảo:  
 <img width="650" height="210" alt="image" src="https://github.com/user-attachments/assets/2f856ab2-76aa-473f-8352-b4dee228327e" />
-
 ---

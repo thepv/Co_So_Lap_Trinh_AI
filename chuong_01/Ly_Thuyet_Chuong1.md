@@ -16,7 +16,7 @@ Sau khi hoàn thành chương, người học có thể:
 - 🔹 Lựa chọn list, tuple, dictionary hoặc set theo yêu cầu bài toán.
 - 🔹 Xử lý chuỗi và đọc/ghi dữ liệu văn bản, CSV, JSON an toàn.
 ▶️ [Xem video Chương 1 Nền tảng Python cho lập trình và trí
-tuệ nhân tạo](https://www.youtube.com/watch?v=noI1hc3aMxY)
+tuệ nhân tạo](https://www.youtube.com/watch?v=GjX-7VmMcyk)
 ---
 
 ## 🚀 1.1. Giới thiệu Python và môi trường lập trình

@@ -149,5 +149,9 @@ Sử dụng thư viện Pandas để thực hiện quy trình chuẩn hóa, phâ
 * Mã nguồn Python triển khai đầy đủ các bước khảo sát, đặt MultiIndex, lọc và xử lý khuyết thiếu.
 * Bảng thống kê chi tiết tỷ lệ khuyết thiếu của từng thuộc tính kèm theo lập luận khoa học cho phương án xử lý được lựa chọn.
 
+  ## 📥 Tệp Dữ Liệu Thực Hành Cho Sinh Viên
+Sinh viên tải tệp dữ liệu mẫu để thực hiện bài tập này tại liên kết dưới đây:
+* **Tải xuống tệp tin**: [weather_stations_data.csv](weather_stations_data.csv) *(lưu tệp tin này vào cùng thư mục chứa file mã nguồn Python để chương trình nhận diện chính xác).*
+
 ---
 

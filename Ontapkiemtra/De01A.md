@@ -1,5 +1,5 @@
 
-# ĐỀ MẪU KIỂM TRA 1
+# ĐỀ MẪU KIỂM TRA 01A
 
 **Học phần:** Cơ sở lập trình cho trí tuệ nhân tạo  
 **Thời gian:** 45 phút
